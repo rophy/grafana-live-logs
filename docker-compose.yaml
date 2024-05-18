@@ -7,6 +7,8 @@ services:
     - 3000:3000
     volumes:
     - ./grafana/etc:/etc/grafana
+    environment:
+      GF_INSTALL_PLUGINS: grafana-mqtt-datasource
   mqtt:
     image: eclipse-mosquitto
     container_name: mqtt
